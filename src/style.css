@@ -25,13 +25,19 @@ body {
 
 .movie {
   display: flex;
-  align-content: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .movie__image {
   width: 100%;
-  object-fit: cover;
+  /* object-fit: cover; */
+  margin-bottom: 10px;
+  height: 360px;
+}
+
+.movie__title {
+  text-align: center;
 }
 
 .search {
@@ -46,6 +52,7 @@ body {
   display: block;
   margin-bottom: 7px;
 }
+
 .search__input {
   display: block;
   max-width: 400px;
@@ -56,15 +63,12 @@ body {
   border: 1px solid steelblue;
 }
 
-.search__group {
-}
 .search__group--checkbox {
   display: flex;
   align-items: center;
   gap: 5px;
 }
-.search__checkbox {
-}
+
 .search__label-checkbox {
   font-size: 0.8rem;
   user-select: none;

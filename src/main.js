@@ -25,9 +25,11 @@ const getData = url => fetch(url)
 
 const addMovieToList = movie => {
   const item = document.createElement('div')
+  const itemDescription = document.createElement('div')
   const img = document.createElement('img')
 
   item.classList.add('movie')
+  itemDescription.classList.add('movie__title')
 
   img.classList.add('movie__image')
   img.src = /^(http|https):\/\//i.test(movie.Poster) ? movie.Poster : 'img/no-image.png'
@@ -35,6 +37,8 @@ const addMovieToList = movie => {
   img.title = `${movie.Title} ${movie.Year}`
 
   item.append(img)
+  itemDescription.innerHTML = `${movie.Title} (${movie.Year})`
+  item.append(itemDescription)
   moviesListElement.prepend(item)
 }
 
