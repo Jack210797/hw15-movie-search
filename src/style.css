@@ -30,7 +30,7 @@ body {
 }
 
 .movie__image {
-  width: 100%;
+  width: 250px;
   height: 360px;
 }
 
@@ -71,4 +71,10 @@ body {
 .search__label-checkbox {
   font-size: 0.8rem;
   user-select: none;
+}
+
+@media (min-width: 460px) {
+  .movie__image {
+    width: 100%;
+  }
 }
