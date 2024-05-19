@@ -31,13 +31,12 @@ body {
 
 .movie__image {
   width: 100%;
-  /* object-fit: cover; */
-  margin-bottom: 10px;
   height: 360px;
 }
 
 .movie__title {
   text-align: center;
+  margin-top: 10px;
 }
 
 .search {
