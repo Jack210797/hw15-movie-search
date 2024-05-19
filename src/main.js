@@ -53,7 +53,7 @@ const inputSearchHandler = (e) => {
     if (!searchQuery || searchQuery.length < 4 || searchQuery === lastSearchQuery) return
     if (!isSearchTriggerEnabled) clearMoviesMarkup()
 
-    getData(`http://www.omdbapi.com/?apikey=4ecdee2&s=${searchQuery}`)
+    getData(`https://www.omdbapi.com/?apikey=4ecdee2&s=${searchQuery}`)
       .then(movies => movies.forEach(addMovieToList))
       .catch(error => console.log(error))
 
